@@ -8,8 +8,11 @@ class ValidatorTest {
 
     @Test
     fun validatePassword_blank_expectedRequired() {
+        // Arrange
         val sut = Validator()
+        // Act
         val result = sut.validatePassword("  ")
+        // Assert
         assertEquals("Password is required field", result)
     }
 

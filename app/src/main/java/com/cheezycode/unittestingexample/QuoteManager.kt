@@ -8,7 +8,7 @@ class QuoteManager() {
     var quoteList = emptyArray<Quote>()
     var currentQuoteIndex = 0
 
-    fun populateQuoteFromAssets(context: Context, fileName: String){
+    fun populateQuoteFromAssets(context: Context, fileName: String) {
         val inputStream = context.assets.open(fileName)
         val size: Int = inputStream.available()
         val buffer = ByteArray(size)
@@ -19,7 +19,7 @@ class QuoteManager() {
         quoteList = gson.fromJson(json, Array<Quote>::class.java)
     }
 
-    fun populateQuotes(quotes: Array<Quote>){
+    fun populateQuotes(quotes: Array<Quote>) {
         quoteList = quotes
     }
 

@@ -12,6 +12,7 @@ class HelperTest {
 
     @Before
     fun setUp(){
+        // Arrange
         helper = Helper()
     }
 
@@ -32,6 +33,14 @@ class HelperTest {
     fun isPallindrome_inputString_level_expectedTrue() {
         //Act
         val result = helper.isPallindrome("level")
+        //Assert
+        assertEquals(true, result)
+    }
+
+    @Test
+    fun isPallindrome_inputString_singleChar_expectedTrue() {
+        //Act
+        val result = helper.isPallindrome("a")
         //Assert
         assertEquals(true, result)
     }
